@@ -1,371 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OlikaX ?</title>
-    <link rel="icon" href="profile.jpg" type="image/jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Bellota:wght@400;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/@heroicons/v2/outline/24/esm/index.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    // Custom font family - Using Bellota for unique typography
-                    fontFamily: {
-                        bellota: ['Bellota', 'cursive'],
-                        orbitron: ['Orbitron', 'sans-serif'],
-                        outfit: ['outfit', 'cursive']
-                    },
-                    // Custom color scheme - Can be modified to match your brand
-                    colors: {
-                        primary: '#000000',    // Bright Blue
-                        secondary: '#000000',   // Dark Blue
-                    }
-                }
-            }
-        }
-    </script>
-
-  
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    
-    <style>
-        
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .animate-gradient {
-            background-size: 200% auto;
-            animation: gradient 4s linear infinite;
-        }
-
-        .bg-grid-white {
-            background-image: linear-gradient(to right, rgba(19, 19, 19, 0.1) 1px, transparent 1px),
-                             linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px);
-        }
-
-       
-        .skill-progress {
-            @apply w-full h-2 bg-gray-200 rounded-full overflow-hidden;
-        }
-        .skill-progress-bar {
-            @apply h-full bg-primary rounded-full transition-all duration-500;
-        }
-
-      
-        .animated-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-        }
-
-        .animated-bg span {
-            position: absolute;
-            display: block;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            animation: float 25s linear infinite;
-        }
-
-        @keyframes float {
-            0% {
-                opacity: 0;
-                transform: translateY(0) rotate(0deg);
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            100% {
-                opacity: 0;
-                transform: translateY(-1000px) rotate(720deg);
-            }
-        }
-
-        #particles-js {
-            position: absolute; 
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1; 
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 2; /
-        }
-        
-      
-        html {
-            scroll-behavior: smooth;
-        }
-
-      
-        html, body {
-            @apply overflow-x-hidden min-h-screen;
-            position: relative; 
-        }
-
-        body {
-            @apply bg-gray-50;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        main {
-            @apply flex-grow relative z-10; 
-        }
-
-        footer {
-             @apply relative z-10; 
-        }
-
-       
-        .site-container {
-            @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full;
-        }
-
-   
-        .section-padding {
-            @apply py-16 md:py-24;
-        }
-
-       
-        .section-content {
-            @apply w-full;
-        }
-
-        
-        .animated-bg {
-            @apply fixed inset-0; 
-            height: 100vh;
-            pointer-events: none;
-            z-index: 0; 
-        }
-
-        .animated-bg span {
-            position: absolute;
-            display: block;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            animation: float 25s linear infinite;
-        }
-
-      
-        @media (max-width: 640px) {
-            .site-container { 
-                @apply px-4;
-            }
-            
-            h1 {
-                @apply text-4xl;
-            }
-            
-            .skill-progress {
-                @apply w-full;
-            }
-
-            .section-padding {
-                 @apply py-12 md:py-16; 
-            }
-        }
-
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OlikaX</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
+<body>
+  <div class="container">
+    <div class="card">
+      <img src="profile.jpg" alt="OlikaX Profile" class="profile-img" />
+      <h1 class="name">OlikaX</h1>
+      <p class="tagline" id="typewriter"></p>
+      <div class="social-links">
+        <a href="https://instagram.com/olika.x" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://twitter.com/olika_x" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/olikax" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://t.me/olika_x" target="_blank"><i class="fab fa-telegram"></i></a>
+        <a href="https://youtube.com/@olika_x" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="mailto:olika.x@gmail.com"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    const text = "Die Another Day";
+    let i = 0;
+    const speed = 80;
 
-<body class="font-bellota text-gray-800">
-    
-    <header class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-black to-black text-white overflow-hidden">
-      
-        <div id="particles-js"></div>
-        
-        
-        <div class="animated-bg" id="animated-bg"></div>
-        
-        
-        <div class="absolute inset-0 bg-grid-white/[0.05] bg-[size:60px_60px]"></div>
-        <div class="absolute inset-0 bg-gradient-to-t from-black-900/50"></div>
-        
-       
-        <div class="hero-content site-container relative flex flex-col items-center justify-center min-h-screen py-20">
-            
-            <div class="relative mb-8 animate-fade-in">
-                <div class="absolute inset-0 bg-white/30 rounded-full blur-[20px] transform animate-pulse"></div>
-                <div class="absolute -inset-1 bg-gradient-to-r from-white to-white rounded-full blur opacity-10 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
-                <img 
-                    src="profile.jpg" 
-                    alt="OlikaX"
-                    class="relative w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-white/50 shadow-2xl object-cover transform hover:scale-105 transition-all duration-300"
-                >
-            </div>
+    function typeWriter() {
+      if (i < text.length) {
+        document.getElementById("typewriter").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, speed);
+      }
+    }
 
-          
-            <div class="relative">
-                <h1 class="text-5xl md:text-6xl font-outfit font-bold mb-4 bg-gradient-to-r from-white via-black-200 to-white bg-clip-text text-transparent animate-gradient">
-                    OlikaX ?
-                </h1>
-                <div class="absolute -inset-1 blur-lg bg-gradient-to-r from-white to-white opacity-5"></div>
-            </div>
-
-            
-            <p class="text-xl md:text-1xl text-gray-200 mb-8 text-center typewriter">
-                Die Another Day
-                <span>🕷</span>
-            </p>
-    </header>
-
-    <main class="relative z-10 bg-gray-50">
-        <div class="site-container py-12">
-       
-            <section class="section-content section-padding">
-                <div class="max-w-4xl mx-auto">
-                    <h2 class="text-3xl font-bold text-center mb-8">
-                        <span class="bg-gradient-to-r from-primary to-secondary text-transparent bg-clip-text">Contact Me  </span>
-                    </h2>
-                    <div class="bg-white rounded-xl shadow-lg p-8">
-                        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-                            <a href="https://instagram.com/real_olix" target="_blank" class="group text-center">
-                                <i class="fab fa-instagram text-4xl text-gray-700 group-hover:text-pink-600 transform group-hover:scale-110 transition-all duration-300"></i>
-                            </a>
-                            <a href="https://twitter.com/OlikaX" target="_blank" class="group text-center">
-                                <i class="fab fa-twitter text-4xl text-gray-700 group-hover:text-blue-400 transform group-hover:scale-110 transition-all duration-300"></i>
-                            </a>
-                            <a href="https://github.com/OlikaX404" target="_blank" class="group text-center">
-                                <i class="fab fa-github text-4xl text-gray-700 group-hover:text-gray-900 transform group-hover:scale-110 transition-all duration-300"></i>
-                            </a>
-                            <a href="https://t.me/OlikaX" target="_blank" class="group text-center">
-                                <i class="fab fa-telegram text-4xl text-gray-700 group-hover:text-blue-500 transform group-hover:scale-110 transition-all duration-300"></i>
-                            </a>
-                            <a href="https://www.youtube.com/Gettechinfo" target="_blank" class="group text-center">
-                                <i class="fab fa-youtube text-4xl text-gray-700 group-hover:text-red-600 transform group-hover:scale-110 transition-all duration-300"></i>
-                            </a>
-                            <a href="https://WWW.gmail.com/Xemila3@gmail.com" class="group text-center">
-                                <i class="fas fa-envelope text-4xl text-gray-700 group-hover:text-primary transform group-hover:scale-110 transition-all duration-300"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-    </main>
-
-    
-    <footer class="relative z-10 bg-gray-900 text-white py-8">
-        <div class="site-container">
-            <p class="text-sm opacity-75 text-center">
-                OlikaX - Die Another Day
-            </p>
-        </div>
-    </footer>
-
-    
-    <script>
-     
-        function createBubbles() {
-            const section = document.getElementById('animated-bg');
-            const bubbleCount = 15;
-
-            for(let i = 0; i < bubbleCount; i++) {
-                const bubble = document.createElement('span');
-                const size = Math.random() * 60 + 20; 
-                
-                bubble.style.width = `${size}px`;
-                bubble.style.height = `${size}px`;
-                bubble.style.left = `${Math.random() * 100}%`;
-                bubble.style.animationDelay = `${Math.random() * 10}s`;
-                bubble.style.animationDuration = `${Math.random() * 20 + 15}s`;
-                
-                section.appendChild(bubble);
-            }
-        }
-
-        
-        document.addEventListener('DOMContentLoaded', createBubbles);
-
-       
-        particlesJS('particles-js',
-            {
-                "particles": {
-                    "number": {
-                        "value": 80,
-                        "density": {
-                            "enable": true,
-                            "value_area": 800
-                        }
-                    },
-                    "color": {
-                        "value": "#ffffff"
-                    },
-                    "shape": {
-                        "type": "circle"
-                    },
-                    "opacity": {
-                        "value": 0.5,
-                        "random": true
-                    },
-                    "size": {
-                        "value": 3,
-                        "random": true
-                    },
-                    "line_linked": {
-                        "enable": true,
-                        "distance": 150,
-                        "color": "#ffffff",
-                        "opacity": 0.4,
-                        "width": 1
-                    },
-                    "move": {
-                        "enable": true,
-                        "speed": 2,
-                        "direction": "none",
-                        "random": true,
-                        "straight": false,
-                        "out_mode": "out",
-                        "bounce": false
-                    }
-                },
-                "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                        "onhover": {
-                            "enable": true,
-                            "mode": "grab"
-                        },
-                        "onclick": {
-                            "enable": true,
-                            "mode": "push"
-                        },
-                        "resize": true
-                    }
-                },
-                "retina_detect": true
-            }
-        );
-
-        
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    window.onload = typeWriter;
+  </script>
 </body>
 </html>
